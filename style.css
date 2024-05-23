@@ -30,6 +30,7 @@ li {
   overflow: hidden;
   height: 30px;
   border-radius: 10px;
+  margin-right: auto;
 }
 
 .other {
@@ -116,14 +117,42 @@ a.active{
   position: absolute;
  }
  table th{
-  padding-left: 15px;
-  padding-top: 3px;
   font-size: 25px;
   color: white;
-  position: absolute;
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 2px;
-  opacity: 0.85;
+  opacity: 0.80;
+  padding-left: 15px;
+  position: absolute;
+ }
+ .e30{
+  width: 325px;
+  height: 200px;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 15px;
+ }
+ .detaile30{
+  position: absolute;
+  width: 420px;
+  text-align: justify;
+  color: white;
+  margin-left: 360px;
+  margin-top: 35px;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.85px;
+ }
+ .second{
+  background-color:#130f40;
+  width: 450px;
+  height: 850px;
+  position: absolute;
+  opacity: 0.6;
+  margin-left: 850px;
+  position: absolute;
+  margin-top: -8px;
  }
