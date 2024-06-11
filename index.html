@@ -1,67 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f8089aa7ab.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Binura</title>
+  </head>
+  <body>
     <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Binura</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
         </label>
-        <label><img class="logo" src="image/binura-high-resolution-logo-black-transparent.png" alt=""></label>
+        <input type="checkbox" name="check" id="check" />
         <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
+      </div>
     </nav>
-    <div class="details">
-        <table>
-            <tr>
-                <td class="detail">
-                    <h1>Hi There,<br>I'm Binura <span class="orange">Namulitha</span><br><span class="pos">Trainee
-                            Fullstack Developer</span><br><button class="aboutme"> About Me <i
-                                class="fa-solid fa-arrow-right"></i>
-                        </button><br>
-                        <div class="social">
-                            <div class="icon icon1">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </div>
-                            <div class="icon icon2">
-                                <i class="fa-brands fa-instagram"></i>
-                            </div>
-                            <div class="icon icon3">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </div>
-                            <div class="icon icon4">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </div>
-                        </div>
-                    </h1>
-                </td>
-                <td>
-                    <div class="dp">
-                        <div class="dp2"><img src="image/IMG_0772.JPEG" alt="">
-                            <h2>Binura Namulitha<br><span>Fullstack Developer</span></h2>
-                            <a href="#">Hire me</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-</body>
-
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Binura<br />a</span> Web Developer
+          </h1>
+          <p class="description">
+            Welcome to my web developer portfolio! I'm Binura, a skilled and
+            creative web developer with a passion for creating beautiful,
+            responsive, and user-friendly websites. I've worked on a variety of
+            web projects, ranging from personal blogs to e-commerce platforms.
+          </p>
+          <div class="action__btns">
+            <button class="hire__me">Hire Me</button>
+            <button class="portfolio">Portfolio</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="image/IMG_0772.JPEG" alt="profile" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

@@ -1,340 +1,220 @@
-body {
-  background-image: url(image/mesh-background-portfolio-lglines.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
 }
 
-.orange {
-  color: darkorange;
-}
-
-h1 {
-  font-family: "Reddit Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 55px;
-  margin-right: 50px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.pos {
-  color: darkred;
-  font-size: 20px;
-  border-right: 5px solid;
-  white-space: nowrap;
-  width: 100%;
-  overflow: hidden;
-  letter-spacing: 5px;
-  margin-top: 5px;
-  display: inline-block;
-  animation:
-    typing 2s,
-    cursor .4s step-end infinite alternate;
-}
-
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-table {
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 110px;
-}
-.logo {
-  width: 58px;
-  height: 38px;
-  position: absolute;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-ul {
+* {
   padding: 0;
   margin: 0;
-  text-decoration: none;
-  list-style: none;
   box-sizing: border-box;
-  font-family: "Reddit Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
-  background: white;
-  height: 50px;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
 }
 
-nav ul {
-  float: right;
-  margin-right: 20px;
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo{
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
   cursor: pointer;
 }
-nav ul li {
-  display: inline-block;
-  line-height: 50px;
-  margin: 0 15px;
-  font-size: 20px;
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
 }
 
-nav ul li a {
-  color: black;
-  text-transform: uppercase;
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
   text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
 }
 
-a.active,
-a:hover {
-  color: purple;
-  padding-bottom: 1px;
-  border-bottom-style: solid;
-  border-bottom-width: 3.1px;
-  width: fit-content;
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
-.checkbtn {
-  font-size: 30px;
-  float: right;
-  line-height: 50px;
-  margin-right: 20px;
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
   cursor: pointer;
-  display: none;
 }
 
-#check {
-  display: none;
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
 }
 
-@media (max-width: 800px) {
-  .checkbtn {
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+@media (width < 750px) {
+  nav .checkbox {
     display: block;
   }
 
   ul {
-    position: fixed;
-    text-align: center;
-    left: -100%;
-    background: white;
+    position: absolute;
     width: 100%;
-    height: 100vh;
-    top: 55px;
-    transition: all .5s;
-    z-index: 4;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
   }
 
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-  }
-
-  nav ul li a {
-    font-size: 20px;
-  }
-
-  #check:checked~ul {
+  nav #check:checked ~ ul {
     left: 0;
   }
-}
-.aboutme {
-  margin-top: 10px;
-  z-index: 1;
-}
 
-button {
-  --color: #560bad;
-  font-family: inherit;
-  display: inline-block;
-  width: 8em;
-  height: 2.6em;
-  line-height: 2.5em;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid var(--color);
-  transition: color .5s;
-  z-index: 1;
-  font-size: 17px;
-  border-radius: 6px;
-  font-weight: 500;
-  color: var(--color);
-}
-
-button:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--color);
-  height: 150px;
-  width: 200px;
-  border-radius: 50%;
-}
-
-button:hover {
-  color: #fff;
-}
-
-button:before {
-  top: 100%;
-  left: 100%;
-  transition: all .7s;
-}
-
-button:hover:before {
-  top: -30px;
-  left: -30px;
-}
-
-button:active:before {
-  background: #3a0ca3;
-  transition: background 0s;
-}
-
-.social {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  min-height: 15vh;
-}
-
-.icon {
-  font-size: 1.7rem;
-  width: 40px;
-  text-align: center;
-  line-height: 40px;
-  box-shadow: 0.5px 0.5px 0.5px #000, -0.5px -0.5px 0.5px #292727;
-  border-radius: 50%;
-  color: white;
-  background-color: black;
-  cursor: pointer;
-  margin-right: 12px;
-  transition: 0.5s ease-in;
-}
-
-.icon1 i:hover {
-  color: #4267B2;
-}
-
-.icon2 i:hover {
-  color: #C13584;
-}
-
-.icon3 i:hover {
-  color: #25D366;
-}
-
-.icon4 i:hover {
-  color: #0072b1;
-}
-
-.dp {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 75px;
-  margin-right: 75px;
-}
-.dp::before{
-  content: '';
-  position: absolute;
-  inset: -10px 110px;
-  background: linear-gradient(315deg,#00ccff,#d400d4);
-  transition: 0.5s;
-  animation: animate 4s linear infinite;
-}
-.dp:hover::before{
-  inset: -20px 0px;
-}
-@keyframes animate{
-  0%{
-    transform: rotate(0deg);
+  ul li a {
+    font-size: 1.25rem;
   }
-  100%{
-    transform: rotate(360deg);
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
   }
-}
-.dp::after{
-  content: '';
-  position: absolute;
-  inset: 6px;
-  background: #162052;
-  border-radius: 50%;
-  z-index: 1;
-}
-.dp2{
-  position: absolute;
-  inset:6px;
-  border: 0.1px solid #070a1c;
-  z-index: 3;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.dp2 img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s;
-  pointer-events: none;
-  z-index: 3;
-}
-.dp:hover .dp2 img{
-  opacity: 0;
-}
-.dp2 h2{
-  position: relative;
-  font-family: "Reddit Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  text-align: center;
-  color: white;
-  letter-spacing: 0.05em;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-.dp2 h2 span{
-  font-weight: 500;
-  font-size: 14px;
-}
-.dp2 a{
-  position: relative;
-  margin-top: 10px;
-  padding: 5px 20px;
-  background: #fff;
-  color: black;
-  border-radius: 25px;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  transition: 0.5s;
-}
-.dp2 a:hover{
-  letter-spacing: 0.2em;
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
 }
